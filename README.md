@@ -1,3 +1,3 @@
-# camera_app
+# solveasy app
 
 A new Flutter project.

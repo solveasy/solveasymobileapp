@@ -18,8 +18,7 @@ class _MainPageState extends State<MainPage> {
   late CameraController cameraController;
   late Future<void> cameraValue;
   bool isFlashOn = false;
-  late Rect _cropRect;
-
+  Rect _cropRect = Rect.zero;
   final double cropPadding = 16.0;
 
   @override
@@ -93,6 +92,7 @@ class _MainPageState extends State<MainPage> {
               builder: (context) => Padding(
                 padding: EdgeInsets.fromLTRB(16.0, topPadding + 16, 0, 0),
                 child: FloatingActionButton(
+                  heroTag: null,
                   backgroundColor: Colors.black.withOpacity(0.1),
                   elevation: 0,
                   onPressed: () {
@@ -109,6 +109,7 @@ class _MainPageState extends State<MainPage> {
             child: Padding(
               padding: EdgeInsets.fromLTRB(0, topPadding + 16, 0, 32),
               child: FloatingActionButton(
+                heroTag: null,
                 backgroundColor: Colors.black12.withOpacity(0.05),
                 elevation: 0,
                 onPressed: () {},
@@ -123,6 +124,7 @@ class _MainPageState extends State<MainPage> {
               width: 70.0,
               height: 70.0,
               child: FloatingActionButton(
+                heroTag: null,
                 backgroundColor: Colors.transparent,
                 elevation: 0,
                 onPressed: takePicture,
